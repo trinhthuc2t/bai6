@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Đổi tiền</title>
+</head>
+<body>
+<table>
+  <tr>
+    <th><label for="nhap">Amount</label></th>
+    <th><label  for="chon1">From Currency</label></th>
+    <th><label for="chon2">To Currency</label></th>
+    <td></td>
+  </tr>
+  <tr>
+    <td><input type="text" id="nhap"></td>
+    <td><select name="a" id="chon1">
+      <option value="23000">VND</option>
+      <option value="1">USD</option>
+    </select></td>
+    <td><select name="b" id="chon2">
+      <option value="1">USD</option>
+      <option value="23000">VND</option>
+    </select></td>
+    <td><button onclick="kq()">Convert</button></td>
+  </tr>
+</table>
+ <p id="mn">Kết quả:</p>
+<script>
+  function kq() {
+    let a = document.getElementById('nhap').value;
+    let b = document.getElementById('chon1').value;
+    let c = document.getElementById('chon2').value;
+    let x = parseFloat(a);
+    let y = parseFloat(b);
+    let z = parseFloat(c);
+   let d = x*z/y
+   document.getElementById('mn').innerHTML ="Kết quả: " +d
+  }
+</script>
+</body>
+</html>
